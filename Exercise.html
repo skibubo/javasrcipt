@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Coding Exercise</title>
+</head>
+<body>
+  <header>
+  </header>
+  <main>
+    <H1>Coding Exercise 1 JavaScript</H1>
+    <p id="exercise"> Code Exercise</p>
+  </main>
+  <footer>
+  </footer>
+  <script >
+    let text =""
+    let n =2;
+    text +="The Multiplication table is"+"<br>";
+    for(let i =1; i<=10; i++ )
+    {
+        text +=  + n + " X "+ + i +" = "+n*i+"<br>";
+    }
+
+    document.getElementById("exercise").innerHTML=text;
+  </script>
+</body>
+</html>
