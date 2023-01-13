@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+  </header>
+  <main>
+    <h1>JavaScript Functions</h1>
+    <p id="demo"></p>
+  </main>
+  <footer>
+  </footer>
+  <script>
+//     let x = Multiplication(2,6)
+// //Javascript elements here
+//     document.getElementById("demo").innerHTML = x;
+//     function Multiplication(a,b){
+//         return(a+b)*2;
+//     }
+
+//  const multiplication=function(a,b){
+//         return a+b;
+//     }
+// //Javascript elements here
+//     document.getElementById("demo").innerHTML = multiplication(2,5);
+
+    //function call
+
+// const person={
+//       fullName:function(city,country){
+//         return this.firstName +" "+ this.lastName +" "+ city+"," +country;
+//       }
+// }
+// const person1 ={
+//      firstName:"John",
+//      lastName: "Omwenga",
+// }
+// const person2 ={ firstName:"Eunice", lastName:"Mukiri"}
+// document.getElementById("demo").innerHTML = person.fullName.call(person2,"Kenya","Nairobi")
+
+
+//function paramaters
+function sumTot(){
+    let sum =0;
+    for (let i=0; i < arguments.length; i++){
+        sum +=arguments[i];
+    }
+ return sum;
+}
+
+document.getElementById("demo").innerHTML = sumTot(66,3,5);
+
+
+  </script>
+</body>
+</html>
