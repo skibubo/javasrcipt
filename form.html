@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Document</title>
+  <style>
+    .mandatory {
+    color: red;
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: italic;
+}
+    </style>
+  <script>
+       function validation(){
+        let x = document.forms["myReg"]["fname"].value;
+        let y = document.forms["myReg"]["email"].value;
+        let z = document.forms["myReg"]["gender"].value;
+        let o = document.forms["myReg"]["age"].value;
+        if(x == "")
+        {
+            alert('Name must filled');
+            return false;
+        }
+        if(z == "")
+        {
+            alert('Specify your gender');
+            return false;
+        }
+        if(y == "")
+        {
+            alert('Email must filled');
+            return false;
+        }
+        if(o =="")
+        {
+          alert(' your age is' + o) ;
+          return true;
+          
+        }
+
+        // function validAge(){
+        //   let o = document.validAge.value;
+        //   alert(o);
+        // }
+        
+              
+       }
+
+  </script>
+</head>
+<body>
+
+  <main>
+    <h1>Javascript Validations</h1>
+    <form name="myReg" method="post" onsubmit="return validation() ">
+        Name: <input type="text" name="fname" class="mandatory" required><br><br> 
+        Gender:  <input type="radio" id="gender" name="gender" value="male"class="mandatory"/> Male 
+        <input type="radio" id="gender" name="gender" value="female" class="mandatory"/> Female <br/><br> 
+        Email: <input type="email" name="email" class="mandatory"><br> <br>
+        Age: <input type="text" name="age" > <br> <br>
+        <input type="submit" value="submit">
+    </form>
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>

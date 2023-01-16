@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+  </header>
+  <main>
+    <h1>javascript Error Handling</h1>
+    <p>Please enter  Number between 5-20 only</p>
+    <input type="text" name="demo" id="demo">
+    <button type="button" onclick="myCacl()">Testing Value</button>
+
+    <p id="p1"> </p>
+  </main>
+  <footer>
+  </footer>
+  <script >
+    function myCacl(){
+        const message = document.getElementById("p1");
+        message.innerHTML = "";
+        let x = document.getElementById('demo').value;
+            try {
+                if (x=="") throw "is Empty";
+                if (isNaN(x)) throw " It's not a number "+ x;
+                x = Number(x);
+                if (x>20) throw "Its too High "+ x;
+                if (x<5) throw "Its too Low "  + x;
+                if (x>=5)throw "Correct entered " + x;
+
+            } 
+        catch (err) {
+            message.innerHTML = "Input " + err;
+        }
+        finally{
+        //statement
+        document.getElementById("demo").value="";
+        }
+    }
+    
+   
+  </script>
+</body>
+</html>

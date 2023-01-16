@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Document</title>
+</head>
+<script>
+    function validAge(){
+        let x = document.myAge.age.value;
+        //alert(x);
+        if(isNaN(x)){
+            document.getElementById('error').innerHTML="Enter your age";
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+</script>
+<body>
+  <main>
+    <form name="myAge" method="post" onsubmit="return validAge()" >
+       Age <input type="text" name="age"> <span id="error"></span> <br> <br>
+       <input type="submit" value="submit">
+    </form>
+  </main>
+  <footer>
+  </footer>
+  <script>
+
+  </script>
+</body>
+</html>
